@@ -1,0 +1,58 @@
+body {
+  background-color: #eeeeee;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 50px;
+}
+
+#img-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+#img-caption {
+  margin-top: 15px;
+}
+
+#tribute-info {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tribute-info h3 {
+  margin-top: 40px;
+}
+
+#year {
+  font-weight: 600;
+}
+
+#tribute-info ul li {
+  margin-top: 15px;
+}
+
+#tribute-info p {
+  font-size: 20px;
+}
+
+#tribute-link {
+  color: #477ca7;
+}
