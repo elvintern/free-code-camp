@@ -40,3 +40,62 @@ nav span {
 nav span i {
   margin-right: 0.5em;
 }
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+iframe {
+  width: 100%;
+  max-width: 560px;
+}
+
+main {
+  margin-top: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.header input:nth-child(2) {
+  width: 16rem;
+  height: 1.8rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.header input:nth-child(3) {
+  width: 8rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f1c40f;
+  margin-top: 1em;
+  padding: 0em 5em;
+}
+
+.btn {
+  font-size: 1rem;
+  font-weight: 800;
+  border: none;
+}
