@@ -69,6 +69,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5em;
 }
 
 .header h2 {
@@ -98,4 +99,31 @@ main {
   font-size: 1rem;
   font-weight: 800;
   border: none;
+}
+
+.strength {
+  margin-top: 3em;
+}
+
+.strength__grid {
+  display: flex;
+  margin-bottom: 4em;
+}
+
+.grid-icon {
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff8c00;
+  font-size: 3rem;
+}
+
+.strength__description {
+  width: 55vw;
+}
+
+.strength__description h1 {
+  font-size: 1.35rem;
+  font-weight: 600;
 }
