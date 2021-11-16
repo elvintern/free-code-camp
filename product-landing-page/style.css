@@ -19,7 +19,7 @@ nav ul {
   margin-right: 3em;
 }
 
-ul li {
+.nav__ul li {
   margin-left: 6em;
 }
 
@@ -185,11 +185,31 @@ main {
 }
 
 footer {
-  width: 70vw;
+  width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #dddddd;
+  margin: 3em auto 0 auto;
 }
 
 .footer-wrapper {
+  width: 65vw;
+  background-color: #dddddd;
+  margin: 3em auto 0 auto;
+  padding: 20px;
+}
+
+.footer-wrapper ul,
+.footer-wrapper p {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-wrapper p {
+  margin-top: 0.5em;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.footer-list li {
+  margin-left: 1em;
 }
