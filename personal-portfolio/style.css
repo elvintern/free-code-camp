@@ -64,16 +64,66 @@ main {
 }
 
 #projects {
-  text-align: center;
   background-color: #45567d;
-  height: 150vh;
+  padding: 16rem 3.2rem;
+  text-align: center;
+}
+
+.project {
+  margin-bottom: 3rem;
 }
 
 .project-title {
-  max-width: 750px;
-  margin: 0 auto;
-  font-size: 5rem;
-  padding-top: 10rem;
+  max-width: 900px;
+  margin: 0 auto 8rem auto;
+  font-size: 6rem;
   color: #f0f0f0;
   border-bottom: 3px solid #f0f0f0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  gap: 7rem;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.project img {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.project p {
+  padding: 2.5rem 0.7rem;
+  font-size: 2.5rem;
+  background-color: #303841;
+  color: #f0f0f0;
+}
+
+.project p span {
+  display: none;
+}
+
+.code {
+  color: #303841;
+  transition-property: orange;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
+
+.btn-show {
+  padding: 1.5rem 3rem;
+  font-size: 2.5rem;
+  background-color: #303841;
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.btn-show i {
+  margin-top: 5rem;
+  margin-left: 1rem;
 }
