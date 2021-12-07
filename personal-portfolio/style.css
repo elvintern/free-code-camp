@@ -22,6 +22,7 @@ body {
   height: 10vh;
   position: fixed;
   top: 0;
+  z-index: 1;
 }
 
 #navbar ul {
@@ -33,10 +34,15 @@ body {
 }
 
 #navbar ul li a {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #f0f0f0;
   text-decoration: none;
   margin-right: 6rem;
+}
+
+.list-item:hover,
+.list-item:focus {
+  opacity: 0.8;
 }
 
 main {
@@ -52,8 +58,8 @@ main {
   align-items: center;
 }
 
-#welcome-section h1 {
-  font-size: 7rem;
+h1 {
+  font-size: 6rem;
   color: #f0f0f0;
 }
 
@@ -71,12 +77,13 @@ main {
 
 .project {
   margin-bottom: 3rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .project-title {
-  max-width: 900px;
+  max-width: 650px;
   margin: 0 auto 8rem auto;
-  font-size: 6rem;
+  font-size: 4.5rem;
   color: #f0f0f0;
   border-bottom: 3px solid #f0f0f0;
 }
@@ -84,21 +91,21 @@ main {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(320px, 1fr));
-  gap: 7rem;
-  width: 85%;
+  gap: 5rem;
+  width: 90%;
   margin: 0 auto;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 
 .project img {
-  height: 90%;
+  height: calc(100% - 6.8rem);
   width: 100%;
   object-fit: cover;
 }
 
 .project p {
   padding: 2.5rem 0.7rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   background-color: #303841;
   color: #f0f0f0;
 }
@@ -109,21 +116,205 @@ main {
 
 .code {
   color: #303841;
-  transition-property: orange;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-  transition-delay: 0s;
+  transition: color 0.3s ease-out 0.5s;
+}
+
+.code:hover {
+  color: orange;
+}
+
+.project:hover,
+.project:focus {
+  transform: scale(1.1);
 }
 
 .btn-show {
   padding: 1.5rem 3rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   background-color: #303841;
   color: #f0f0f0;
   text-decoration: none;
+}
+
+.btn-show:hover {
+  background-color: rgb(253, 52, 52);
+  transition: 0.2s ease-out;
 }
 
 .btn-show i {
   margin-top: 5rem;
   margin-left: 1rem;
 }
+
+#contact {
+  width: 100%;
+  height: 100vh;
+  background-color: #303841;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.container p {
+  font-size: 2.2rem;
+  font-style: italic;
+  opacity: 0.9;
+  margin-top: 0.2em;
+}
+
+#contact .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sns-links {
+  margin-top: 5em;
+}
+
+.sns-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.link {
+  transition: all 0.5s ease-in-out;
+}
+
+.link:hover {
+  color: red;
+}
+
+.sns-links a i {
+  margin-right: 10px;
+}
+
+.sns-links a + a {
+  margin-left: 2em;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  border-top: 5px solid red;
+  width: 100%;
+  padding: 3em 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer p {
+  color: white;
+  margin-left: 10px;
+  font-size: 1.8rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+}
+
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(320px, 1fr));
+  }
+}
+
+@media (max-width: 950px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container h1 {
+    font-size: 5rem;
+  }
+
+  .container p {
+    font-size: 2rem;
+  }
+
+  .sns-links a {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 850px) {
+  .projects-grid {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    width: 70%;
+    gap: 2rem;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 675px) {
+  #navbar ul li a {
+    font-size: 1.4rem;
+    color: #f0f0f0;
+    text-decoration: none;
+    margin-right: 6rem;
+  }
+
+  #welcome-section h1 {
+    font-size: 3rem;
+  }
+
+  #welcome-section p {
+    font-size: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.7rem;
+    max-width: 270px;
+  }
+
+  .project p {
+    font-size: 1.5rem;
+  }
+
+  .btn-show {
+    font-size: 1.25rem;
+  }
+
+  .container h1 {
+    font-size: 3rem;
+  }
+
+  .container p {
+    font-size: 1rem;
+  }
+
+  footer {
+    width: 80%;
+    margin: auto;
+  }
+  footer p {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  .sns-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .sns-links a + a {
+    margin-left: 0;
+    margin-top: 1em;
+  }
+} ;
